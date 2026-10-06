@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy 4 Months Anniversary 🐰 My Melody</title>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+</div>
+    <!-- พื้นหลังหัวใจลอย -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- ปุ่มเปิด/ปิดเสียงดนตรี -->
+    <div class="music-player-widget" id="musicToggle" title="เปิด/ปิด เสียงดนตรีประกอบ">
+        <span id="musicIcon">🎶</span>
+    </div>
+
+    <!-- ซ่อนเครื่องเล่น YouTube สำหรับเล่นเพลงประกอบเว็บ -->
+    <div id="hiddenYtPlayer" style="display: none;"></div>
+
+    <div class="phone-container">
+        <!-- หน้าที่ 1: หน้าเปิดจดหมาย -->
+        <section class="page active" id="pageIntro">
+            <div class="melody-banner"></div>
+            <div class="intro-card glass-card">
+                <div class="cute-badge">✨ Special Day ✨</div>
+                <h1 class="main-title">Happy 4 Months<br>Anniversary krub! 💖</h1>
+                <p class="sub-title">ครบรอบ 4 เดือนแล้วน้าคนสวยของพี่ ขอบคุณที่อยู่ข้างกันตลอดเลยนะคับ มาเปิดดูเซอร์ไพรส์กันเถอะ!</p>
+                
+                <div class="envelope-wrapper" id="openEnvelopeBtn">
+                    <div class="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-pocket"></div>
+                        <div class="heart-seal">💌</div>
+                    </div>
+                    <span class="tap-hint">แตะเพื่อเปิดจดหมายจ้า! 👇</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- หน้าที่ 2: เมนูหลัก -->
+        <section class="page" id="pageHome">
+            <header class="app-header">
+                <div class="user-avatar">💖</div>
+                <div>
+                    <h2>4 Months With You</h2>
+                    <p class="date-counter" id="dateCounter">คำนวณเวลาความรัก...</p>
+                </div>
+            </header>
+
+            <div class="menu-grid">
+                <div class="menu-card" onclick="switchPage('pageStory')">
+                    <div class="menu-icon">📖</div>
+                    <h3>Our Story</h3>
+                    <p>เรื่องราว 4 เดือนของเรา</p>
+                </div>
+                <div class="menu-card" onclick="switchPage('pageLoveNotes')">
+                    <div class="menu-icon">💌</div>
+                    <h3>Love Notes</h3>
+                    <p>ความในใจถึงเธอ</p>
+                </div>
+                <div class="menu-card" onclick="switchPage('pageGallery')">
+                    <div class="menu-icon">📸</div>
+                    <h3>Cute Gallery</h3>
+                    <p>ความทรงจำสีชมพู</p>
+                </div>
+                <div class="menu-card" onclick="switchPage('pageGame')">
+                    <div class="menu-icon">🎮</div>
+                    <h3>Mini Game</h3>
+                    <p>เก็บหัวใจให้กันนะ</p>
+                </div>
+            </div>
+
+            <div class="daily-quote-box glass-card">
+                <h4>🐰 My Melody Says:</h4>
+                <p id="dailyQuote">"เธอคือความสุขที่น่ารักที่สุดในโลกเลยนะ รู้ตัวมั้ย?"</p>
+            </div>
+        </section>
+
+        <!-- หน้าที่ 3: ไทม์ไลน์ความรัก -->
+        <section class="page" id="pageStory">
+            <div class="sub-header">
+                <button class="back-btn" onclick="switchPage('pageHome')">🏠 หน้าหลัก</button>
+                <h2>Our Timeline ⏳</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="t-date">จุดเริ่มต้นของเรา</span>
+                        <h3>วันที่เราเริ่มคุย / เริ่มคบกัน</h3>
+                        <p>ช่วงเวลาที่ทำให้โลกของเค้าสดใสขึ้นมาทันที ขอบคุณนะที่เข้ามาเติมเต็มทุกวัน</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="t-date">เดือนที่ 1 - 2</span>
+                        <h3>เรียนรู้และปรับตัว</h3>
+                        <p>ผ่านเรื่องราวสนุกๆ เสียงหัวเราะ และความห่วงใยที่มีให้กันเสมอมา</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="t-date">เดือนที่ 3</span>
+                        <h3>ความผูกพันที่มากขึ้น</h3>
+                        <p>ยิ่งรู้จักก็ยิ่งรัก ยิ่งสนิทกันมากขึ้นเรื่อยๆ มีเธออยู่ในทุกโมเมนต์สำคัญ</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="t-date">ปัจจุบัน (เดือนที่ 4)</span>
+                        <h3>Happy 4 Months Anniversary! 🎉</h3>
+                        <p>อยู่ดูแลกันแบบนี้ไปนานๆ เลยน้า สัญญาว่าจะน่ารักและเป็นที่พักพิงให้เธอแบบนี้เสมอ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- หน้าที่ 4: ความในใจ -->
+        <section class="page" id="pageLoveNotes">
+            <div class="sub-header">
+                <button class="back-btn" onclick="switchPage('pageHome')">🏠 หน้าหลัก</button>
+                <h2>Love Notes 💌</h2>
+            </div>
+            <div class="notes-container">
+                <div class="note-card glass-card" onclick="openNoteModal('ความรู้สึกจากใจ', 'ขอบคุณนะที่คอยอยู่ข้างๆ กัน ขอบคุณรอยยิ้มและเสียงหัวเราะที่ทำให้วันเหนื่อยๆ กลายเป็นวันที่สดใส อ้วนคือกำลังใจที่ดีที่สุดของพี่เลยนะ ❤️')">
+                    <div class="note-icon">🌸</div>
+                    <h3>ความรู้สึกจากใจ</h3>
+                    <p>แตะเพื่ออ่านข้อความพิเศษ...</p>
+                </div>
+                <div class="note-card glass-card" onclick="openNoteModal('สัญญาใจ 4 เดือน', 'ถึงแม้บางครั้งเราอาจจะมีงอนกันบ้าง แต่เพี่ก็รักอ้วนมากๆ น้า ไม่เคยอยากไปไหนเลย อยู่เป็นมายเมโลดี้คู่ใจของเค้าไปนานๆ นะคะ 🥰')">
+                    <div class="note-icon">🎀</div>
+                    <h3>สัญญาใจ 4 เดือน</h3>
+                    <p>แตะเพื่ออ่านข้อความพิเศษ...</p>
+                </div>
+                <div class="note-card glass-card" onclick="openNoteModal('อนาคตของเรา', 'ขอให้ 4 เดือนนี้เป็นเพียงจุดเริ่มต้นของความสุขอีกหลายๆ ปีน้า จะดูแล รัก และตามใจอ้วนให้ดีที่สุดเลยคนเก่งของเค้า! 🐰💕')">
+                    <div class="note-icon">🌟</div>
+                    <h3>อนาคตของเรา</h3>
+                    <p>แตะเพื่ออ่านข้อความพิเศษ...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- หน้าที่ 5: แกลเลอรีรูปภาพ -->
+        <section class="page" id="pageGallery">
+            <div class="sub-header">
+                <button class="back-btn" onclick="switchPage('pageHome')">🏠 หน้าหลัก</button>
+                <h2>Cute Gallery 📸</h2>
+            </div>
+            <p class="gallery-hint">รวมความทรงจำ & รูปน่ารักๆ เพื่อเธอ</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://scontent.fbkk35-1.fna.fbcdn.net/v/t1.15752-9/837417235_1747590956331621_5949842933615308968_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=ysER_KOGxw8Q7kNvwHFMlZ4&_nc_oc=AdoZO6Rb2EJXewi3VF9cQ6SKCI_4kKXOtz4KzIBaoZMOVLeeubPvtQmvwzvg0ohKfOvyjL6MlwUuumvQnmjPIfe1&_nc_zt=23&_nc_ht=scontent.fbkk35-1.fna&_nc_ss=7b6a8&oh=03_Q7cD6gHjsSm_ttmVCe_CeEzRPXNqP92_bhSJ6Nl04PkI7QLx8g&oe=6AEC6157">
+                    <div class="gallery-tag">โมเมนต์น่ารักๆ</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://scontent.fbkk35-1.fna.fbcdn.net/v/t1.15752-9/831398192_1845364086880944_6070302090882059780_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=B2aBXWeoeDMQ7kNvwEFt2Xo&_nc_oc=AdqmDQxrGkClJfzOwFW9JWv4yXLsd2N_T8xty1J8Dn2onQD8kP8HShbrrrwdPLQ_4ltQaITxNVucHWjBgBZ-QoF2&_nc_zt=23&_nc_ht=scontent.fbkk35-1.fna&_nc_ss=7b6a8&oh=03_Q7cD6gFgEgl2Q_fzs-YrCsdLbNe1faKehb-TcspqoSw5FtwAxw&oe=6AEC4D5C">
+                    <div class="gallery-tag">วันไปเที่ยวด้วยกัน</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://scontent.fbkk35-1.fna.fbcdn.net/v/t1.15752-9/838248503_1417575650352759_5980875196497418693_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iNtCDYKgL58Q7kNvwGsfm8O&_nc_oc=Adqoz56VA4UDAYmbvfMRfaCx2wLAyMYXtHZiAI3xE0nHzrvyI5xAPKZXmdEnv4BDSrD2HowzgMIXYIf9vMqBoM1F&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fbkk35-1.fna&_nc_ss=7a22e&oh=03_Q7cD6gHxQi9pGXy3_pUp0_VowZcYpkdlKAP982Y3IRn2MF1ifA&oe=6AEC467B">
+                    <div class="gallery-tag">รอยยิ้มของเธอ</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://scontent.fbkk35-1.fna.fbcdn.net/v/t1.15752-9/832730010_1100737629591104_539148790425659661_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Zo-FsmdbrokQ7kNvwG3W63N&_nc_oc=AdrEX7w5fsKwK6Ra9drehKoYsuR9YtnxFie-40RHWSgXWKfnCC4Vwvp33ruuGxrVHCW1cF8ZjpGYLZhdEE7VyM8J&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fbkk35-1.fna&_nc_ss=7a22e&oh=03_Q7cD6gEVmInF03KDGgAxoj7dtLlrQhm_HnfQSp9_wun_WLn5hg&oe=6AEC69B2">
+                    <div class="gallery-tag">คนสวยของเค้า</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- หน้าที่ 6: มินิเกม -->
+        <section class="page" id="pageGame">
+            <div class="sub-header">
+                <button class="back-btn" onclick="switchPage('pageHome')">🏠 หน้าหลัก</button>
+                <h2>Catch My Heart 🎮</h2>
+            </div>
+            <div class="game-box glass-card">
+                <p>กดเก็บหัวใจที่ลอยขึ้นมาให้ได้มากที่สุดภายใน 20 วินาที!</p>
+                <div class="game-stats">
+                    <span>คะแนน: <strong id="scoreVal">0</strong></span>
+                    <span>เวลา: <strong id="timeVal">20</strong>s</span>
+                </div>
+                <div class="game-canvas-area" id="gameArea">
+                    <button class="start-game-btn" id="startGameBtn" onclick="startGame()">เริ่มเล่นเกม! 💖</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Popup อ่านข้อความ -->
+    <div class="modal" id="noteModal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h3 id="modalTitle">หัวข้อ</h3>
+                <span class="close-modal" onclick="closeNoteModal()">&times;</span>
+            </div>
+            <p id="modalBody">เนื้อหาข้อความ...</p>
+            <div class="modal-footer">
+                <button class="cute-btn" onclick="closeNoteModal()">รับทราบค่ะแฟนจ๋า! 💖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Popup เมื่อเล่นเกมจบ -->
+    <div class="celebration-overlay" id="celebrationOverlay">
+        <div class="celebration-card glass-card">
+            <h2>🎉 เก่งมากเลยแฟนจ๋า! 🎉</h2>
+            <p id="celebrationText">เธอเก็บหัวใจได้เยอะมากๆ รักเธอนะคะ!</p>
+            <button class="cute-btn" onclick="closeCelebration()">เย้! รับรางวัลจุ๊บหนึ่งที 💋</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
